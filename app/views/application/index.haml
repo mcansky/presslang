@@ -1,3 +1,4 @@
 %div.grid_16.content
   %div.text
-    a
+    - @words.each do |word|
+      = render 'application/word', :word => word

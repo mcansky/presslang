@@ -1,0 +1,9 @@
+%div.word
+  %h3
+    = "« " + word.word + " »"
+    %span.infos
+      = link_to image_tag("/images/twit.png", :width => 20), "https://twitter.com/#{word.definition.author}/status/#{word.definition.twitter_id}"
+      = link_to "@#{word.definition.author}", "https://twitter.com/#{word.definition.author}"
+      = "(#{word.definition.created_at.strftime("%d/%m/%Y %H:%M")})"
+  %p
+    = word.definition.definition
