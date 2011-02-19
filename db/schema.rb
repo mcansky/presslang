@@ -10,11 +10,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110219193732) do
+ActiveRecord::Schema.define(:version => 20110219194353) do
 
   create_table "definitions", :force => true do |t|
     t.text     "definition"
-    t.text     "word_id"
     t.string   "author"
     t.string   "sha"
     t.string   "twitter_id"
@@ -22,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20110219193732) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "banned",     :default => "n"
+    t.integer  "word_id"
   end
 
   create_table "words", :force => true do |t|
