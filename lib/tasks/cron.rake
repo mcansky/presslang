@@ -30,6 +30,7 @@ task :cron => :environment do
       author = definition["from_user"]
       twitter_id = definition["id_str"]
       twitted_at = definition["created_at"]
+      lang = definition["iso_language_code"]
       Rails.logger.info("Treating #{twitter_id}")
       message = ""
       if sdef.size == 2
@@ -63,7 +64,7 @@ task :cron => :environment do
         word_w = Word.find_by_word(word)
         unless word_w
           # we don't have the word yet, let's create it
-          word_w = Word.new(:word => word, :lang => 'fr')
+          word_w = Word.new(:word => word, :lang => lang)
         end
         # we got the word, let's add a def to it
         word_w.definitions << def_w
