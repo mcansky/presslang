@@ -68,7 +68,6 @@ task :cron => :environment do
         word_w.definitions << def_w
         if word_w.save
           Rails.logger.info("#{twitter_id} has been added")
-          expire_page(:controller => 'application', :action => 'index')
         else
           Rails.logger.warn("#{twitter_id} error : #{word_w.errors}")
         end

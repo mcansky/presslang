@@ -1,4 +1,5 @@
 %div.grid_15.prefix_1.content
-  %div.text
-    - @words.each do |word|
-      = render 'application/word', :word => word
+  - cache("last_20_words", :expires_in => 15.minutes) do
+    %div.text
+      - @words.each do |word|
+        = render 'application/word', :word => word
