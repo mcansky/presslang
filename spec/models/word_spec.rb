@@ -26,6 +26,6 @@ describe "Word with just lang should be invalid" do
 end
 
 describe "Word with just lang sized 2+ should be invalid" do
-  subject { Word.new :lang => "ena" }
-  it { should be_invalid }
+  subject { Word.new :word => "cezf", :lang => "ena" }
+  it { should be_invalid, "2 letters format" }
 end
