@@ -1,0 +1,52 @@
+* {
+  font-family: "Molengo", "Adobe Caslon Pro", "Hoefler Text", Garamond, serif; }
+
+h1, h2, h3, h4, h5 {
+  font-family: Cuprum, "Myriad Pro", Corbel, "Helvetica Neue", Helvetica, "Lucida Grande", Verdana, sans-serif; }
+
+.clear {
+  clear: both; }
+
+h1.banner {
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding: 0; }
+
+body {
+  background: #555555; }
+
+.content {
+  background: white;
+  -moz-box-shadow: 3px 0px 4px black;
+  -webkit-box-shadow: 3px 0px 4px black;
+  box-shadow: 3px 0px 4px black; }
+
+#banner {
+  background: #2b0d1a;
+  color: white;
+  padding-bottom: 10px; }
+
+.subbanner {
+  float: left;
+  margin-left: 120px;
+  font-family: "Molengo", "Adobe Caslon Pro", "Hoefler Text", Garamond, serif;
+  font-size: 12pt;
+  font-style: italic;
+  margin-top: -10px; }
+
+.text {
+  padding: 10px; }
+
+#footer {
+  background: #333333;
+  color: #dddddd;
+  font-size: 9pt; }
+
+#footer h3 {
+  padding: 0;
+  font-size: 13pt;
+  margin-bottom: 5px; }
+
+#footer p.format {
+  margin-left: 10px; }

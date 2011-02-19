@@ -1,11 +1,56 @@
 $base_font: 'Molengo', 'Adobe Caslon Pro', 'Hoefler Text', Garamond, serif
-$title_font: 'Myriad Pro', Corbel, 'Helvetica Neue', Helvetica, 'Lucida Grande', Verdana, sans-serif
+$title_font: Cuprum, 'Myriad Pro', Corbel, 'Helvetica Neue', Helvetica, 'Lucida Grande', Verdana, sans-serif
+$banner_background: #2B0D1A
 
 *
-	font-family: $base_font
+  font-family: $base_font
 
 h1, h2, h3, h4, h5
-	font-family: $title_font
+  font-family: $title_font
 
 .clear
-	clear: both
+  clear: both
+
+h1.banner
+  margin-left: 20px
+  margin-top: 10px
+  margin-bottom: 0px
+  padding: 0
+
+body
+  background: #555
+
+.content
+  background: #FFF
+  -moz-box-shadow: 3px 0px 4px #000
+  -webkit-box-shadow: 3px 0px 4px #000
+  box-shadow: 3px 0px 4px #000
+
+#banner
+  background: $banner_background
+  color: #FFF
+  padding-bottom: 10px
+
+.subbanner
+  float: left
+  margin-left: 120px
+  font-family: $base_font
+  font-size: 12pt
+  font-style: italic
+  margin-top: -10px
+
+.text
+  padding: 10px
+
+#footer
+  background: #333
+  color: #DDD
+  font-size: 9pt
+
+#footer h3
+  padding: 0
+  font-size: 13pt
+  margin-bottom: 5px
+
+#footer p.format
+  margin-left: 10px

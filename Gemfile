@@ -31,9 +31,12 @@ gem 'sqlite3'
 # end
 gem "factory_girl_rails", ">= 1.0.0", :group => :test
 gem "rspec-rails", ">= 2.2.1", :group => [:development, :test]
+gem "shoulda", :group => :test
 gem "haml-rails", ">= 0.3.4"
 gem "hassle", :git => "git://github.com/koppen/hassle.git"
 gem "jquery-rails"
 gem "thin"
 gem "pg", :group => [:production]
 gem "yard"
+
+gem "twitter"
