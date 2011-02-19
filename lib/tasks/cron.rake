@@ -24,7 +24,8 @@ task :cron => :environment do
   if twits.size > 0
     twits.each do |definition|
       bad_twit = false
-      sdef = definition.text.gsub(%r{#[a-zA-Z0-9]+ *},'').gsub(%r{@[a-zA-Z0-9]+ *},'').gsub(/[«»]/,'').gsub("&quot;",'').split(":")
+      sanitized = definition.text.gsub(%r{#[a-zA-Z0-9]+ *},'').gsub(%r{@[a-zA-Z0-9]+ *},'').gsub(/[«»]/,'').gsub("&quot;",'')
+      sdef = sanitized.split(":")
       word = sdef.first.gsub(%r{^ +},'').chomp
       author = definition["from_user"]
       twitter_id = definition["id_str"]
@@ -34,7 +35,7 @@ task :cron => :environment do
       if sdef.size == 2
         message = sdef[1].gsub(%r{^ +},'')
       elsif sdef.size > 2
-        message = sdef[1,-1].join(" ").gsub(%r{^ +},'')
+        message = sanitized.gsub(word,'').gsub(%r{^ +},'')
       else
         bad_twit = true
       end
