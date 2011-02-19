@@ -4,7 +4,7 @@ task :cron => :environment do
   search = Twitter::Search.new
   already_done = false
   twits = Array.new
-  defins = search.hashtag("presslang").language("fr").no_retweets.per_page(20).fetch
+  defins = search.hashtag("presslang").no_retweets.per_page(20).fetch
   @defins = defins
   while !already_done
     raise RuntimeError, "lost the messages" if (!@defins || (@defins.size == 0))
