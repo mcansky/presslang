@@ -34,7 +34,7 @@ task :cron => :environment do
       if sdef.size == 2
         message = sdef[1].gsub(%r{^ +},'')
       elsif sdef.size > 2
-        message = sdef[1,-1].gsub(%r{^ +},'')
+        message = sdef[1,-1].join(" ").gsub(%r{^ +},'')
       else
         bad_twit = true
       end
