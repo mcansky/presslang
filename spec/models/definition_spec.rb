@@ -21,7 +21,7 @@ describe "Definition with only definition should be invalid" do
   it { should be_invalid }
 end
 
-describe "Definition with all should be invalid" do
+describe "Definition with all should be valid" do
   subject { Definition.new :definition => "a definition",
     :author => "@mcansky",
     :word => Word.new,
