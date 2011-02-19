@@ -28,3 +28,19 @@ describe "Definition with all should be valid" do
     :sha => Digest::SHA1.hexdigest("a definition")}
   it { should be_valid }
 end
+
+describe "Testing Definition author attribute : incorrect should fail" do
+  subject { Definition.new(:word => Word.new,
+    :author => "czef",
+    :definition => "ad dezf",
+    :sha => Digest::SHA1.hexdigest("a definition")) }
+  it { should be_invalid, "should be twitter format" }
+end
+
+describe "Testing Definition sha attribute : incorrect should fail" do
+  subject { Definition.new(:word => Word.new,
+    :author => "czef",
+    :definition => "ad dezf",
+    :sha => "zefzef") }
+  it { should be_invalid, "sha1 too short" }
+end
