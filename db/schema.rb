@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(:version => 20110219144327) do
     t.string   "author"
     t.string   "sha"
     t.string   "twitter_id"
+    t.datetime "twitted_at"
     t.boolean  "banned",     :default => false
     t.datetime "created_at"
     t.datetime "updated_at"

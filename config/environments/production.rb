@@ -26,6 +26,12 @@ Presslang::Application.configure do
 
   # Use a different cache store in production
   # config.cache_store = :mem_cache_store
+  # Global enable/disable all memcached usage
+  config.perform_caching = true
+  # Disable/enable fragment and page caching in ActionController
+  config.action_controller.perform_caching = true
+  # The underlying cache store to use.
+  config.cache_store = :dalli_store
 
   # Disable Rails's static asset server
   # In production, Apache or nginx will already do this
